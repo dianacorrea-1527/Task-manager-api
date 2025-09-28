@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController //manejar los datos en formato JSON
 @RequestMapping("/api/tareas")
+@CrossOrigin("*") //habilitar intercambio de recursos para cualquier dominio
 
 public class TareaController {
 @Autowired

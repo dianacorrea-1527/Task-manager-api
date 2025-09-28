@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Tarea } from '../models/tarea';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class TareaService {
   getAllTareas(): Observable<Tarea[]>{
     return this.http.get<Tarea[]>(this.baseUrl);
   }
-  getTareaById(id:number):Observable<Tarea>{
+  getTareaById(id:number):Observable<Tarea[]>{
     return this.http.get<Tarea[]>(`${this.baseUrl}/${id}`)
   }
 
